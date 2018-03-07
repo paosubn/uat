@@ -18,3 +18,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/persona', function(){
+	return view('persona');
+
+});
+
+Route::get('/main', function(){
+	return view('forms.form-denunciante');
+
+});
+
+Route::get('/pruebas', function(){
+	return view('validacion');
+
+});
+
+Route::get('/header', function(){
+	return view('template.main');
+
+
+});
