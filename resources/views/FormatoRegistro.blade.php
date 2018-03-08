@@ -9,15 +9,7 @@
             <title>Registro</title>
             <link rel="icon" href="{{ asset('img/FGE-icon3.png') }}">
 
-            
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-            <link href="{{ asset('css/estilosnavbar.css') }}" rel="stylesheet">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            <style>
+            <style> 
             label {
             font-size: 11px;
 
@@ -25,18 +17,20 @@
             .item {
             display:block;
 
-            width: 500%;
+            width: 350px;
             height:300px;
-            margin-left: 200px;
+            margin-left: 175px;
+             margin-bottom: 10px;
             }
             .izquierda{
-            margin-top: 10px;
-            margin-left: 50px;
+            margin-top: 15px;
+            margin-left: 75px;
             font-size: 14px;
             }
 
             .nombre{
-            background: #767676; color: #ffffff; margin-top: 18px; width: 720px; height:30px;
+                margin-top: 15px;
+        background: #767676; color: #ffffff; margin-top: 18px; width: 730px; height:40px;
             font-size: 14px;
             }
 
@@ -45,11 +39,19 @@
             font-size: 14px;
             margin-top: 12px;
             }
+            
+              .nom{
+                float: left;
+              margin-top: -36px;   
+           
+            font-size: 14px;
+           color: white;
+            }
 
             .nota{
             text-align:left;
-            font-size: 10px;
-            margin-left: 580px;
+            font-size: 8px;
+            margin-left: 560px;
 
             }
             </style>
@@ -62,15 +64,19 @@
             </div>  
            
 
-            <div id="izquierda">
+            <div>
                 {{ Form::label('etiqueta', 'Circuito Rafael Guízar y Valencia No. 707, Colonia Reserva Territorial C.P. 91096
                 Xalapa, Veracruz. ', array('class' => 'izquierda')) }}
             </div>  
 
-            <div >
-                 {{ Form::label('etiqueta',$DatosRegistros[0]->nombre.' '.$DatosRegistros[0]->primerAp.' '.$DatosRegistros[0]->segundoAp , array('class' => 'nombre')) }}
-            </div>  
 
+    <table class = "nombre" >
+         <tr >
+            <div class ="nom">{{ $DatosRegistros[0]->nombre.' '.$DatosRegistros[0]->primerAp.' '.$DatosRegistros[0]->segundoAp }}</div>
+         </tr>
+    </table>
+
+         
     <table class = "folio" >
          <tr >
             <h1>Folio: {{ $DatosRegistros[0]->folio}}</h1>
@@ -84,7 +90,7 @@
     <table >
         <tr class="nota">
         <div id="nota">
-            {{ Form::label('etiqueta', 'Este folio deverá ser presentado en la audiencia', array('class' => 'nota')) }}
+            {{ Form::label('etiqueta', 'Este Folio deverá ser presentado en la audiencia', array('class' => 'nota')) }}
         </div>  
         </tr>
     </table>
