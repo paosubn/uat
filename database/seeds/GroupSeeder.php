@@ -14,7 +14,7 @@ class GroupSeeder extends Seeder
         DB::table('groups')->insert([
             ['grupo' => 'auxiliar','descripcion' => 'Auxiliar','status' => '1'],
             ['grupo' => 'fiscal','descripcion' => 'Fiscal','status' => '1'],
-            ['grupo' => 'zz','descripcion' => 'Tester','status' => '1'],
+            ['grupo' => 'ZZ','descripcion' => 'Tester','status' => '1'],
         ]);
     }
 }
