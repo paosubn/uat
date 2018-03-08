@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/verificar', 'Login@index');
+Route::get('FormatoRegistro/{id}', 'PDFcontroller@datos');
 
 Route::get('/persona', function(){
 	return view('persona');

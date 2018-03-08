@@ -8,18 +8,18 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ url('verificar') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="user" class="col-sm-4 col-form-label text-md-right">{{ __('Usuario') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="user" type="user" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" name="user" value="{{ old('user') }}" required autofocus>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('user'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('user') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -34,6 +34,20 @@
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="grupo" class="col-sm-4 col-form-label text-md-right">{{ __('Grupo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid' : '' }}" name="grupo" value="{{ old('grupo') }}" required autofocus>
+
+                                @if ($errors->has('grupo'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('grupo') }}</strong>
                                     </span>
                                 @endif
                             </div>
