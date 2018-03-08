@@ -46,3 +46,5 @@ Route::get('/header', function(){
 
 
 });
+
+	Route::resource('/preregistro','PreregistroController');
