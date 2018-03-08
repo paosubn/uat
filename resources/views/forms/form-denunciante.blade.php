@@ -6,7 +6,7 @@
 	@include('fields.tipo-persona')
 </div>
 
-{!! Form::open(['method' => 'POST', 'class'=> 'form-group'])  !!}
+{!! Form::open(['method' => 'POST', 'class'=> 'form-group', 'data-toggle'=>"validator"])  !!}
 <div class="card" id="datosPer">
 	<div class="card-header">
 		<p class=" lead" align="center">

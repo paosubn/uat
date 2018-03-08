@@ -1,5 +1,4 @@
 
-
 <header>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 		<a class="navbar-brand" href=""><img src="{{ asset('img/logofge2.png') }}" alt="" class="logofge"></a>
