@@ -45,17 +45,12 @@
                             <div class="col-md-6">
                                 {{-- <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid'  name="grupo" value="{{ old('grupo') }}" required autofocus> --}} 
                                  <select name="grupo" class="form-control" > 
-
-                                            <option>Fútbol</option>
-
-                                            <option>Críquet</option>
-
-                                             <option>Básquetbol</option>
-
-                                              <option>Hockey</option>
-
-                                             <option>Tenis</option>
-
+                                         
+                                           <select>
+                                            @foreach($users as $user)
+                                            <option> {{$user->grupo}}</option>
+                                            <option> {{$user->descripcion}}</option>
+                                             @endforeach
                                               </select>
 
                                 @if ($errors->has('grupo'))
