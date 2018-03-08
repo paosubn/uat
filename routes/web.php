@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/verificar', 'Login@index');
+//Route::get('/login', 'Login@index');
