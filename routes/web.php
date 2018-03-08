@@ -15,10 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/verificar', 'Login@index');
+Route::post('/verificar', 'LoginActiveController@comprobar');
+/*Route::get('/login', function(){
+	return view('auth.login');
+
+});*/
+Route::get('/loginactive', 'LoginActiveController@index');
 Route::get('FormatoRegistro/{id}', 'PDFcontroller@datos');
 
 Route::get('/persona', function(){

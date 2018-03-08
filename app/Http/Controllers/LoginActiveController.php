@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use app\Http\Requests\LoginRequest;
+use App\Models\Group;
 
-class Login extends Controller{
+class LoginActiveController extends Controller
+{
+	public function index(){
+		$users = Group::select('grupo','descripcion')->get();
+		return view('ad')->with('users',$users);
+	}
 
-	public function index(Request $request){
+    public function comprobar(Request $request){
 		$usuario = $request->input("user");
 		$pass = $request->input("password");
 		$grupo = $request->input("grupo");
