@@ -24,7 +24,7 @@ class PreregistroController extends Controller
      */
     public function create()
     {
-        return view('forms.form-denunciante');
+        return view('preregistroWeb.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class PreregistroController extends Controller
      */
     public function store(Request $request)
     {
-        
+        dd($request);
         $preregistro = new Preregistro($request->all());
         $preregistro-> save();
         return redirect()->route('home');
