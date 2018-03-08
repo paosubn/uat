@@ -40,9 +40,15 @@
 
                         <div class="form-group row">
                             <label for="grupo" class="col-sm-4 col-form-label text-md-right">{{ __('Grupo') }}</label>
-
+                            
                             <div class="col-md-6">
-                                <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid' : '' }}" name="grupo" value="{{ old('grupo') }}" required autofocus>
+                                 <select name="grupo" class="form-control" > 
+                                          <select>
+                                            @foreach($users as $user)
+                                            <option> {{$user->grupo}}</option>
+                                            <option> {{$user->descripcion}}</option>
+                                             @endforeach
+                                              </select>
 
                                 @if ($errors->has('grupo'))
                                     <span class="invalid-feedback">
