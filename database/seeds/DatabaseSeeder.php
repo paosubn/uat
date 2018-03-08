@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LocalidadSeeder::class);
         $this->call(LocalidadSeeder2::class);
         $this->call(PruebaSeeder::class);
+        $this->call(GroupSeeder::class);
     }
 }
