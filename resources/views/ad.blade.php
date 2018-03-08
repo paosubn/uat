@@ -42,6 +42,7 @@
                             <label for="grupo" class="col-sm-4 col-form-label text-md-right">{{ __('Grupo') }}</label>
                             
                             <div class="col-md-6">
+<<<<<<< HEAD
                                  <select name="grupo" class="form-control" > 
                                           <select>
                                             @foreach($users as $user)
@@ -49,6 +50,13 @@
                                             <option> {{$user->descripcion}}</option>
                                              @endforeach
                                               </select>
+=======
+                                <select class="form-control" id="grupo" name="grupo">
+                                    @foreach($users as $user)
+                                    <option value="{{$user->grupo}}">{{$user->descripcion}}</option>
+                                    @endforeach
+                                </select>
+>>>>>>> 44704704bd3708a9e3b94b4d006d48b663293928
 
                                 @if ($errors->has('grupo'))
                                     <span class="invalid-feedback">
