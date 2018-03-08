@@ -15,7 +15,8 @@
 	@include('fields.tipo-persona')
 </div>
 
-{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST', 'class'=> 'form-group', 'data-toggle'=>"validator"])  !!}
+
+<form action="{{ route('preregistro.store') }}" class="form-group" method="post">
 <div class="card" id="datosPer">
 	<div class="card-header">
 		<p class=" lead" align="center">
@@ -57,8 +58,11 @@
 <div class="form-group">
 	<div class="col-12">
 		<div class="col">
-			{!! Form::label('narracion', 'Narración', ['class' => 'col-form-label-sm']) !!}
-			{!! Form::textarea('narracion', null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese la narración de los hechos', 'rows' => '5', 'required']) !!}
+			<label for="narracion" class="col-form-label-sm">Narración</label>
+			<textarea name="narracion" id="" cols="30" rows="10" class="form-control form-control-sm" required=>
+				
+			</textarea>
+			
 		</div>
 	</div>
 </div>
@@ -72,15 +76,15 @@
 		</div>
 		<div class="col">   
 			<div class="text-right">
-				{!! Form::submit('Guardar', ['class' => 'btn btn-dark', 'id' => 'btn-submit']) !!}
+				<button type="submit" class="btn btn-primary">
+				
 			</div>
 		</div>
 	</div>
 </div>
 
-{!! Form::close() !!}
+</form>
 
-@include('fields.resumen')
 
 
 @endsection

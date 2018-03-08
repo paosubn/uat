@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreDenunciante;
+//use App\Http\Requests\StoreDenunciante;
 
 class DenuncianteController extends Controller
 {
     
-    public function StoreDenunciante(StoreDenunciante $request){
+    public function validar(Request $request){
+    	dd($request);
         //dd($request->all());
-        if($request->esEmpresa==0){
+       /* if($request->esEmpresa==0){
             $persona = new Persona();
             $persona->nombres = $request->nombres;
             $persona->primerAp = $request->primerAp;
@@ -35,20 +36,8 @@ class DenuncianteController extends Controller
             $idPersona = $persona->id;
 
 
-             Alert::success('Denunciante registrado con éxito', 'Hecho')->persistent("Aceptar");
+             Alert::success('Denunciante registrado con éxito', 'Hecho')->persistent("Aceptar");*/
         //return redirect()->route('carpeta', $request->idCarpeta);
 }
 
-public function showForm($esEmpresa)
-    {
-        if(count($esEmpresa)==1){ 
-            
-            return view('validacion')
-                ->with('nombres', $nombres)
-                ->with('rfc', $rfc)
-                ->with('representante_legal', $representante_legal);
-             
-        }else{
-            return redirect()->route('form-denunciante');
-        }
     }

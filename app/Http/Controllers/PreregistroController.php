@@ -24,7 +24,7 @@ class PreregistroController extends Controller
      */
     public function create()
     {
-        //
+        return view('forms.form-denunciante');
     }
 
     /**
