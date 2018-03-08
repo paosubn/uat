@@ -47,4 +47,6 @@ Route::get('/header', function(){
 
 });
 
-	Route::resource('/preregistro','PreregistroController');
+Route::resource('/preregistro','PreregistroController');
+
+Route::resource('/predenuncias','PreregistroAuxController');
