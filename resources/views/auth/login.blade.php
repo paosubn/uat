@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ url('verificar') }}">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -43,7 +43,20 @@
                             <label for="grupo" class="col-sm-4 col-form-label text-md-right">{{ __('Grupo') }}</label>
 
                             <div class="col-md-6">
-                                <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid' : '' }}" name="grupo" value="{{ old('grupo') }}" required autofocus>
+                                {{-- <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid'  name="grupo" value="{{ old('grupo') }}" required autofocus> --}} 
+                                 <select name="grupo" class="form-control" > 
+
+                                            <option>Fútbol</option>
+
+                                            <option>Críquet</option>
+
+                                             <option>Básquetbol</option>
+
+                                              <option>Hockey</option>
+
+                                             <option>Tenis</option>
+
+                                              </select>
 
                                 @if ($errors->has('grupo'))
                                     <span class="invalid-feedback">
@@ -53,7 +66,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                       {{--  <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
@@ -61,17 +74,17 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-default">
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>
