@@ -7,12 +7,15 @@
     <title>UAT</title>
     {{--  Style  --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     @yield('css')
-    {{--  -----  --}}
+    <link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 </head>
 <body>
     <div class="container">
-        @include('template.header')
+        @include('template.partials.header')
 
         @yield('content')
     </div>
