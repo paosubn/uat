@@ -26,6 +26,7 @@ class LoginRequest extends FormRequest
         return [
             'user' => 'required',
             'password' => 'required',
+            'grupo' => 'required',
         ];
     }
 }

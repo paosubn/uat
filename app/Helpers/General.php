@@ -1,9 +1,8 @@
 <?php
-/*La siguiente función recibe un usuario y contraseña por parámetros, autentifica contra active directory y devuelve el status: 0 = usuario o contraseña inválidos, 1 = datos correctos pero no pertenece al grupo, 2 = autentificación correcta*/
-function login($usuario,$pass) {
+/*La siguiente función recibe un usuario, contraseña y grupo al que pertenece en active directory por parámetros, autentifica y devuelve el status: 0 = usuario o contraseña inválidos, 1 = datos correctos pero no pertenece al grupo, 2 = autentificación correcta*/
+function login($usuario,$pass,$grupo) {
     $ip = "192.108.24.107";
 	$dn = "OU=FGE,DC=fiscaliaveracruz,DC=gob,DC=mx";
-	$grupo = "ZZ";
 	$dominio = '@fiscaliaveracruz.gob.mx';
 	$mensaje = '';
 	$conexion = ldap_connect($ip);

@@ -40,6 +40,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="grupo" class="col-sm-4 col-form-label text-md-right">{{ __('Grupo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="grupo" type="grupo" class="form-control{{ $errors->has('grupo') ? ' is-invalid' : '' }}" name="grupo" value="{{ old('grupo') }}" required autofocus>
+
+                                @if ($errors->has('grupo'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('grupo') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
