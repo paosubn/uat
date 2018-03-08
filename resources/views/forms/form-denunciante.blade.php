@@ -1,12 +1,21 @@
 
 @extends('template.main')
 @section('contenido')
+@if ($errors->any())
+		<div class="alert alert-danger">
+	        <ul>
+	            @foreach ($errors->all() as $error)
+	                <li>{{ $error }}</li>
+	            @endforeach
+	        </ul>
+	    </div>
+	@endif
 
 <div>
 	@include('fields.tipo-persona')
 </div>
 
-{!! Form::open(['method' => 'POST', 'class'=> 'form-group', 'data-toggle'=>"validator"])  !!}
+{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST', 'class'=> 'form-group', 'data-toggle'=>"validator"])  !!}
 <div class="card" id="datosPer">
 	<div class="card-header">
 		<p class=" lead" align="center">
@@ -30,12 +39,12 @@
 				<div class="clearfix"></div>
 				<div class="form-check form-check-inline">
 					<label class="form-check-label col-form-label col-form-label-sm">
-						<input class="form-check-input" type="radio" id="conViolencia" name="conViolencia" value="1" required> Sí
+						<input class="form-check-input" type="radio" id="conViolencia" name="conViolencia" value="1"> Sí
 					</label>
 				</div>
 				<div class="form-check form-check-inline">
 					<label class="form-check-label col-form-label col-form-label-sm">
-						<input class="form-check-input" type="radio" id="sinViolencia" name="sinViolencia" value="0" required> No
+						<input class="form-check-input" type="radio" id="sinViolencia" name="sinViolencia" value="0"> No
 					</label>
 				</div>
 			</div>

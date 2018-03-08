@@ -19,24 +19,4 @@
 				<div class="invalid-feedback">
        			 You must agree before submitting.
       </div>
-      <div class="form-group" id="empresa" name=>
-      	<p name="empresa">hola</p>
-      </div>
-      <button class="btn btn-primary" type="submit">Submit form</button>
-		</div>
-		
-	</form>
-</div>
-
-<src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-
-<script>
-$(document).ready(function(){
-	$("empresa").hide();
-
-	$("esEmpresa1").click(function(){
-
-		$("empresa").show("slow");
-});
-});
-</script>
+      

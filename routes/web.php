@@ -41,3 +41,5 @@ Route::get('/header', function(){
 
 
 });
+
+	Route::post('storedenunciante', 'DenuncianteController@storeDenunciante')->name('store.denunciante');

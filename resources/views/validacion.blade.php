@@ -52,23 +52,24 @@
 </form>
 
 <script src = "js/validator.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <div>
-    <button id="hola">ok</button>
-    <button id="adios">adios</button>
+    <button class="ok">ok</button>
+    <button class="adios">adios</button>
 </div>
 
-<div id="genial">
+<div class="genial">
     sip
 </div>
 
 <script>
 $(document).ready(function(){
-    $("genial").hide();
+    $(".genial").hide();
 
-    $("hola").click(function(){
+    $(".ok").click(function(){
 
-        $("genial").show("slow");
+        $(".genial").show("slow");
 });
 });
 </script>
