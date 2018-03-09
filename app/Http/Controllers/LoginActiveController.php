@@ -9,7 +9,7 @@ class LoginActiveController extends Controller
 {
 	public function index(){
 		$users = Group::select('grupo','descripcion')->get();
-		return view('ad')->with('users',$users);
+		return view('login.acceso')->with('users',$users);
 	}
 
     public function comprobar(Request $request){
