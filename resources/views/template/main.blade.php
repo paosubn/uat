@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/font-awesome/css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{asset ('css/sweetalert.css')}}">
-
+    <script src="{{ asset('js/scripts.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
      
      <script src="{{ asset('js/es.js')}}" ></script>
+
 
 
      

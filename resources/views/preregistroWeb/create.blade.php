@@ -34,40 +34,6 @@
 			</div>
 		</div>
 
-		<div id="collapsePersonales2" class="collapse show boxcollapse" >
-			<div class="boxtwo">
-				<div class="col">
-				@include('preregistroWeb.fields.datos-empresa')
-				</div>
-			</div>
-		</div>
-
-		<script>	
-$(document).ready(function(){
-    $("#esEmpresa1").prop("checked", false);
-    $("#esEmpresa2").prop("checked", false);
-    $('#collapsePersonales2').hide();
-	
-});
-$("#esEmpresa1").change(function(event){
-        if ($('#esEmpresa1').is(':checked') ) {
-            $('#collapsePersonales2').show();
-            $('#collapsePersonales1').hide();
-        }
-    });
-$("#esEmpresa2").change(function(event){
-	if ($('#esEmpresa2').is(':checked') ) {
-            $('#collapsePersonales2').hide();
-            $('#collapsePersonales1').show();
-        }
-});
-		
-
-
-
-	
-</script>
-			<!--div class="card" id="datosDir"-->
 
 
 		<div class="boxtwo">
