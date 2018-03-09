@@ -26,6 +26,21 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+       $schedule->call(function () {
+       DB::table('preregistros')->where('statusCancelacion', '=',0)->delete();
+       })->daily();
+
+        $schedule->call(function (){
+
+           DB::table('preregistros')->where('statusCancelacion', '=',1)->delete();
+           })->weekly();
+    
+
+         //  $schedule->call(function () {
+            //   DB::table()
+              // })->daily();
+
     }
 
     /**
