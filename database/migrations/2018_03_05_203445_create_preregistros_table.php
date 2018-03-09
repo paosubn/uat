@@ -33,7 +33,7 @@ class CreatePreregistrosTable extends Migration
             $table->string('representanteLegal',100)->default("SIN INFORMACION");
             $table->boolean('statusCancelacion')->default(false);
             $table->boolean('statusOrigen')->default(false);
-
+            $table->boolean('statusCola')->nullable();
             $table->foreign('idDireccion')->references('id')->on('domicilio')->onDelete('cascade');
 
             $table->timestamps();

@@ -28,6 +28,7 @@ class Preregistro extends Model
         'representanteLegal',
         'statusCancelacion',
         'statusOrigen',
+        'statusCola',
     ];
 
     public function direcciones(){
