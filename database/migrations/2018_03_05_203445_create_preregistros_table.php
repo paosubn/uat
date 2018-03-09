@@ -13,7 +13,7 @@ class CreatePreregistrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('preregistro', function (Blueprint $table) {
+        Schema::create('preregistros', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('idDireccion')->unsigned();
             $table->boolean('esEmpresa')->default(false);

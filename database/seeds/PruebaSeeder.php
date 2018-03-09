@@ -19,7 +19,7 @@ class PruebaSeeder extends Seeder
         	
         ]);
 
-        DB::table('preregistro')->insert([
+        DB::table('preregistros')->insert([
             ['idDireccion'  =>  1,  'esEmpresa'   =>  0,  'nombre' =>  'ALBERTO',  'primerAp' =>  'Perez', 'segundoAp'    =>  'Perez',  'rfc'    =>  'a65s41f3a5s1d','sexo'=>'HOMBRE','telefono'=>'6841534316','docIdentificacion'=> 'ine','numDocIdentificacion'=>'oajsfñoajdfaksdfgaj','narracion'=>'asufhaksdifahsdgijakshd iDHSFisdhfi hKFH Khfkihfk hkfuahsdkfhakshkaehfh awehfñwaehfk','folio'=>'ASFAS48354AFE' ],
             ['idDireccion'  =>  1,  'esEmpresa'   =>  0,  'nombre' =>  'JUAN',  'primerAp' =>  'Perez', 'segundoAp'    =>  'Perez',  'rfc'    =>  'a65s41f3a5s1d','sexo'=>'HOMBRE','telefono'=>'6841534316','docIdentificacion'=> 'ine','numDocIdentificacion'=>'oajsfñoajdfaksdfgaj','narracion'=>'asufhaksdifahsdgijakshd iDHSFisdhfi hKFH Khfkihfk hkfuahsdkfhakshkaehfh awehfñwaehfk','folio'=>'ASFAS48354AFE' ],
             ['idDireccion'  =>  1,  'esEmpresa'   =>  0,  'nombre' =>  'RAIMUNDO',  'primerAp' =>  'Perez', 'segundoAp'    =>  'Perez',  'rfc'    =>  'a65s41f3a5s1d','sexo'=>'HOMBRE','telefono'=>'6841534316','docIdentificacion'=> 'ine','numDocIdentificacion'=>'oajsfñoajdfaksdfgaj','narracion'=>'asufhaksdifahsdgijakshd iDHSFisdhfi hKFH Khfkihfk hkfuahsdkfhakshkaehfh awehfñwaehfk','folio'=>'ASFAS48354AFE' ],
