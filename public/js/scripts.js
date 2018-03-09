@@ -4,12 +4,14 @@ $(document).ready(function(){
     $("#esEmpresa1").prop("checked", false);
     $("#esEmpresa2").prop("checked", false);
     $('#collapsePersonales1').hide();
+    $('#collapsePersonales2').hide();
     
+   
     //Si es empresa
     $("#esEmpresa1").change(function(event){
         if ($('#esEmpresa1').is(':checked') ) {
-            $('#collapsePersonales1').show();
-            
+            $('#collapsePersonales2').show();
+             $('#collapsePersonales1').hide();
             
 
             //Datos personales requeridos de Persona Moral o Empresa
@@ -29,17 +31,21 @@ $(document).ready(function(){
             $("#curp").prop('disabled', true);    
             $("#telefono").prop('disabled', true);   
             $("#docIdentificacion").prop('disabled', true);   
-            $("#numDocIdentificacion").prop('disabled', true);   
+            $("#numDocIdentificacion").prop('disabled', true);
+
             
     
         }
     });
+
+
     //No es empresa
     $("#esEmpresa2").change(function(event){
         if ($('#esEmpresa2').is(':checked') ) {
             $('#collapsePersonales1').show();
-            $('#nombre').hide();
-            $('#rfc2').hide();
+             $('#collapsePersonales2').hide();
+            
+            
 
             //Datos personales no requeridos de Persona Moral o Empresa
             $('#nombre').prop('disabled', true);
@@ -60,26 +66,13 @@ $(document).ready(function(){
             
             $("#docIdentificacion").prop('disabled', false);   
             $("#numDocIdentificacion").prop('disabled', false);   
-            
-             
+           
         }
     });
 
 
-    $(function () {
-        $('#fechanac').datetimepicker({
-            format: 'YYYY-MM-DD',
-            minDate: moment().subtract(150, 'years').format('YYYY-MM-DD'),
-            maxDate: moment().subtract(18, 'years').format('YYYY-MM-DD')
-        });
-    });
 
-    $("#fechanac").on("change.datetimepicker", function (e) {
-        $('#edad').val(moment().diff(e.date,'years'));
-    });
-    $( "#edad" ).change(function() {
-        var anios = $('#edad').val();
-        $('#fechanac').datetimepicker('date', moment().subtract(anios, 'years').format('YYYY-MM-DD'));
-    });
-
+});
+    
+    
    

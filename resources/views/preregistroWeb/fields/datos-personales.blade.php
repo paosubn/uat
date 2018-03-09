@@ -52,14 +52,7 @@
 				</div>
 			</div>
 
-			<script>
-    	
-            $(function () {
-                $('#datetimepicker').datetimepicker(
-
-                	);
-            });
-        </script>
+			
    
 
 			<div class="col-4">
@@ -166,33 +159,6 @@
 					<div class="help-block with-errors"></div>
 				</div>
 			</div>
-
-			<div class="form-row" >
-				<div class="col-4">
-				<div class="form-group">
-					{!! Form::label('nombre', 'Nombre', ['class' => 'col-form-label-sm','valid-tooltip']) !!}
-					{!! Form::text('nombre', null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese el nombre','required']) !!}
-					<div class="help-block with-errors"></div> 
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="form-group">
-					{!! Form::label('rfc2', 'R.F.C.', ['class' => 'col-form-label-sm']) !!}
-					{!! Form::text('rfc2', null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese el R.F.C.', 'required']) !!}
-					<div class="help-block with-errors"></div>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="form-group">
-					{!! Form::label('repLegal', 'Representante Legal', ['class' => 'col-form-label-sm','valid-tooltip']) !!}
-					{!! Form::text('repLegal', null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese el nombre','required']) !!}
-					<div class="help-block with-errors"></div> 
-				</div>
-			</div>
-
-
-		</div>
-	
 			
 
 		</div>

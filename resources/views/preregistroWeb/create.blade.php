@@ -34,6 +34,14 @@
 			</div>
 		</div>
 
+		<div id="collapsePersonales2" class="collapse show boxcollapse" >
+			<div class="boxtwo">
+				<div class="col">
+				@include('preregistroWeb.fields.datos-empresa')
+				</div>
+			</div>
+		</div>
+
 
 
 		<div class="boxtwo">
