@@ -50,3 +50,9 @@ Route::get('/header', function(){
 Route::resource('/preregistro','PreregistroController');
 
 Route::resource('/predenuncias','PreregistroAuxController');
+
+Route::get('/createpruebas', function(){
+	return view('preregistroWeb.createpruebas');
+
+
+});
