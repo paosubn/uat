@@ -36,8 +36,11 @@
 			<div class="col-4">
 				<div class="form-group">
 					{!! Form::label('fechaNacimiento', 'Fecha de nacimiento', ['class' => 'col-form-label-sm']) !!}
+
 					<div class="input-group date" id="fechanac" data-target-input="nearest">
+
 						{!! Form::text('fechaNacimiento', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechanac', 'required', 'placeholder' => 'DD/MM/AAAA','required']) !!}
+
 						<span class="input-group-addon" data-target="#fechanac" data-toggle="datetimepicker">
 							<i class="fa fa-calendar" aria-hidden="true"></i>
 
@@ -48,6 +51,14 @@
 					<div class="help-block with-errors"></div>
 				</div>
 			</div>
+
+			<script>
+    	
+            $(function () {
+                $('#datetimepicker').datetimepicker();
+            });
+        </script>
+   
 
 			<div class="col-4">
 				
@@ -84,6 +95,25 @@
 					<div class="help-block with-errors"></div>
 				</div>
 			</div>
+			<div class="col-4">
+				<div class="form-group">
+					{!! Form::label('idMunicipio', 'Municipio', ['class' => 'col-form-label-sm']) !!}
+					{!! Form::select('idMunicipio', [''=>'Seleccione un municipio'], null, ['class' => 'form-control form-control-sm' ]) !!}
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+	
+			<div class="col-4">
+				<div class="form-group col-form-label-sm">
+					<label for="sel1">Entidad Federativa:</label>
+						<select class="form-control" id="sel1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+				</div>
+			</div>
 
 			<div class="col-4">
 				<div class="form-group">
@@ -110,25 +140,7 @@
 			</div>
 	<!--cambiar por larabelCollective-->
 				
-			<div class="col-4">
-				<div class="form-group">
-					{!! Form::label('idMunicipio', 'Municipio', ['class' => 'col-form-label-sm']) !!}
-					{!! Form::select('idMunicipio', [''=>'Seleccione un municipio'], null, ['class' => 'form-control form-control-sm' ]) !!}
-					<div class="help-block with-errors"></div>
-				</div>
-			</div>
-	
-			<div class="col-4">
-				<div class="form-group col-form-label-sm">
-					<label for="sel1">Entidad Federativa:</label>
-						<select class="form-control" id="sel1">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-				</div>
-			</div>
+			
 
 		</div>
 	</div>

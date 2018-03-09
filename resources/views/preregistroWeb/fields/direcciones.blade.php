@@ -2,9 +2,9 @@
 
 	<!--cambiar por larabelCollective-->
 			<div class="col-3">
-				<div class="form-group">
-					<label for="sel1">Entidad Federativa:</label>
-  						<select class="form-control" id="sel1">
+				<div class="form-control-sm">
+					<label for="sel1" class=" form-control-sm col-form-label-sm">Entidad Federativa:</label>
+  						<select class="col-form-label-sm form-control" id="sel1">
 						    <option>1</option>
 						    <option>2</option>
 						    <option>3</option>

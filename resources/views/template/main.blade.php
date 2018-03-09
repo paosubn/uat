@@ -18,6 +18,23 @@
 	<link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 
+    <script src="{{ asset('js/jquery-3.3.1.min.js')}}" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/moment.js')}}" ></script>
+     <script src="{{ asset('js/tempusdominus-bootstrap-4.js')}}" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+     
+     <script src="{{ asset('js/es.js')}}" ></script>
+
+
+     
+
+
+     
+
+
+
     @yield('css')
  
 <body>
@@ -42,10 +59,10 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src = "js/validator.min.js"></script>
+    <script src ="{{asset('js/validator.min.js')}}"></script>
 
     
     @yield('scripts')

@@ -14,6 +14,7 @@
 	
 	
 {!!Form::open(['route' => 'preregistro.store'])!!}
+
 	<div>
 		@include('preregistroWeb.fields.tipo-persona')
 	</div>
@@ -25,14 +26,50 @@
 
 			</p>
 		</div>
-		<div id="collapsePersonales1" class="collapse show boxcollapse">
+		<div id="collapsePersonales1" class="collapse show boxcollapse" >
 			<div class="boxtwo">
+				<div class="col">
 				@include('preregistroWeb.fields.datos-personales')
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<!--div class="card" id="datosDir"-->
+		<div id="collapsePersonales2" class="collapse show boxcollapse" >
+			<div class="boxtwo">
+				<div class="col">
+				@include('preregistroWeb.fields.datos-empresa')
+				</div>
+			</div>
+		</div>
+
+		<script>	
+$(document).ready(function(){
+    $("#esEmpresa1").prop("checked", false);
+    $("#esEmpresa2").prop("checked", false);
+    $('#collapsePersonales2').hide();
+	
+});
+$("#esEmpresa1").change(function(event){
+        if ($('#esEmpresa1').is(':checked') ) {
+            $('#collapsePersonales2').show();
+            $('#collapsePersonales1').hide();
+        }
+    });
+$("#esEmpresa2").change(function(event){
+	if ($('#esEmpresa2').is(':checked') ) {
+            $('#collapsePersonales2').hide();
+            $('#collapsePersonales1').show();
+        }
+});
+		
+
+
+
+	
+</script>
+			<!--div class="card" id="datosDir"-->
+
+
 		<div class="boxtwo">
 			<div class="form-group" align="center">
 				<div class="col">
@@ -40,39 +77,39 @@
 					<div class="clearfix"></div>
 					<div class="form-check form-check-inline">
 						<label class="form-check-label col-form-label col-form-label-sm">
-							<input class="form-check-input" type="radio" id="conViolencia" name="conViolencia" value="1"> Sí
+							<input class="form-check-input" type="radio" id="conViolencia" name="Violencia" value="1"> Sí
 						</label>
 					</div>
 					<div class="form-check form-check-inline">
 						<label class="form-check-label col-form-label col-form-label-sm">
-							<input class="form-check-input" type="radio" id="sinViolencia" name="sinViolencia" value="0"> No
+							<input class="form-check-input" type="radio" id="sinViolencia" name="Violencia" value="0"> No
 						</label>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		
+		
+		
+
+		
+
+
 	<!--/div-->
-
-
 
 	<div class="form-group">
 		<div class="col-12">
 			<div class="col">
 				<label for="narracion" class="col-form-label-sm">Narración</label>
-				<textarea name="narracion" id="" cols="30" rows="10" class="form-control form-control-sm" required=>
-					
-				</textarea>
-				
+				<textarea name="narracion" id="" cols="30" rows="10" class="form-control form-control-sm" required=></textarea>
 			</div>
 		</div>
 	</div>
-	<!--BOTTONS-->
+
 	<div class="boxtwo">
 		<div class="row">
 			<div class="col">
-				<div class="text-left">
-					<a href="{{-- route('carpeta', $idCarpeta) --}}" class="btn btn-dark text-center">Volver atrás</a>
-				</div>
 			</div>
 			<div class="col">   
 				<div class="text-right">
@@ -84,7 +121,20 @@
 		</div>
 	</div>
 
-{!!Form::close()!!}
+
+	{!!Form::close()!!}
+		</div>
+	</div>
+
+	
+
+
+
+	
+	<!--BOTTONS-->
+	
+
+
 
 
 @endsection
